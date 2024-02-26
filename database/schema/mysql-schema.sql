@@ -21,4 +21,5 @@ CREATE TABLE `migrations` (
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-14  9:47:00
+-- Dump completed on 2021-07-14  9:47:00 
+-- Path: database/schema/mysql-schema.sql
