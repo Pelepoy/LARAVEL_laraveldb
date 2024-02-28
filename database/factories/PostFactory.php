@@ -21,12 +21,13 @@ class PostFactory extends Factory
         $slug = Str::slug($title, '-'); // Convert the title to a slug
 
         return [
+            'user_id'      =>  fake()->randomDigit(), // User id from 'users' table
             'title'        =>  $title,
             'slug'         =>  $slug,
             'excerpt'      =>  fake()->sentence,
             'description'  =>  fake()->text,
             'is_published' =>  fake()->boolean,
-            'min_to_read'  =>  fake()->randomDigit(),
+            'min_to_read'  =>  fake()->numberBetween(20, 40),
         ];
     }
 }
