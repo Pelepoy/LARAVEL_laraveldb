@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id()->from(1000); // Start auto increment from 1000
+            $table->foreignId('user_id')
+                ->comment('Author of the post')
+                ->constrained('users')
+                ->cascadeOnDelete();
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->text('excerpt')
